@@ -2,8 +2,8 @@
 The purpose of this program is to numerically calculate an integral using Simpson's Rule for a given function
 '''
 
-def f(x):
-	return x**2
+def f(x):            # The variable for the function you wish to integrate
+	return 3*x**4
 
 def integral(f, a, b, n):
 	dx = (b-a)/float(n)
