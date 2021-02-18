@@ -1,3 +1,7 @@
+'''
+The purpose of this program is to numerically calculate an integral using Simpson's Rule for a given function
+'''
+
 def f(x):
 	return x**2
 
