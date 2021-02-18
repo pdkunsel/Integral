@@ -1,6 +1,8 @@
 '''
 The purpose of this program is to numerically calculate an integral using Simpson's Rule for a given function
 '''
+import my_library
+
 
 def f(x):            # The variable for the function you wish to integrate
     return 3*x**4
@@ -18,4 +20,4 @@ def integral(f, a, b, n):
     approx = dx/3.0 * (f(a)+f(b)+sum1+sum2)
     return approx
 
-print(integral(f, 0, 1, 1000))
+print(integral(my_library_my_quadratic_func, 0, 1, 1000))
