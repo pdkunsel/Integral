@@ -9,3 +9,4 @@ def my_power_function_1(x, func_params={"prefactor": 1.0, "power": 2, "x_shift":
 
     return A * (x - x0)**n + y0
 
+print(my_power_function_1(1, {"prefactor": 1.0, "power": 2, "x_shift": 0.0, "y_shift": 0.0})) 
