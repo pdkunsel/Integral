@@ -1,7 +1,9 @@
-import functions_library
+from functions_library import *
 
 def f(x):
     return x**2
+
+print(my_power_function_1(1, {"prefactor": 1.0, "power": 2, "x_shift": 0.0, "y_shift": 0.0})) 
 
 def integral(integrand, left_bound, right_bound, npoints, integration_type):
     if integration_type == "simpson":
@@ -39,3 +41,5 @@ def numerical_integral(integrand, left_bound, right_bound, npoints, integration_
         return result 
 
 print numerical_integral(f, 0, 1, 1000, "simpson",  1e-10)
+
+print numerical_integral(my_power_function_1, 0, 1, 1000, "simpson", 1e-10)
