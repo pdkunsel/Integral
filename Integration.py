@@ -21,3 +21,5 @@ def integral(f, a, b, n):
     return approx
 
 print(integral(my_library.my_quadratic_func, 0, 1, 1000))
+print(integral(f,0,1,1000))
+print("The integral of 3x^4 is equal to: 3/5")
