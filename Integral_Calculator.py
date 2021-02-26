@@ -18,6 +18,13 @@ def integral(integrand, left_bound, right_bound, npoints, integration_type):
         sum2 *= 2
         approx = dx/3.0 * (f(left_bound)+f(right_bound)+sum1+sum2)
         return approx
+    elif integration_type == "midpoint":
+        dx = (right_bound - left_bound)/float(npoints)
+        sum = 0
+        for i in range(1, npoints):
+           sum += integrand((left_bound + dx/2) + i*dx)
+        approx = dx * sum
+    return approx
 
 print(integral(f, 0, 1, 1000, "simpson"))
 
@@ -43,3 +50,5 @@ def numerical_integral(integrand, left_bound, right_bound, npoints, integration_
 print numerical_integral(f, 0, 1, 1000, "simpson",  1e-10)
 
 print numerical_integral(my_power_function_1, 0, 1, 1000, "simpson", 1e-10)
+
+print integral(f, 0, 1, 1000, "midpoint")
